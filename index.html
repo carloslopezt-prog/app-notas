@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Notas Accesible</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main class="tarjeta">
+    <h1>Gestor de Notas</h1>
+    <p class="ayuda">Crea y organiza tus notas de forma sencilla.</p>
+
+    <form id="formulario-nota" novalidate>
+      <fieldset>
+        <legend>Nueva Nota</legend>
+        
+        <label for="titulo">Título de la nota</label>
+        <input id="titulo" type="text" placeholder="Ej: Compras del super" required>
+
+        <label for="contenido">Detalle de la nota</label>
+        <textarea id="contenido" rows="3" placeholder="Escribe los detalles aquí..." required></textarea>
+      </fieldset>
+
+      <p id="mensaje" class="mensaje" role="status"></p>
+
+      <div class="acciones">
+        <button type="submit" class="boton-principal">Guardar nota</button>
+        <button type="reset" class="boton-secundario">Limpiar campos</button>
+      </div>
+    </form>
+
+    <hr>
+
+    <section aria-labelledby="titulo-lista">
+      <h2 id="titulo-lista">Mis Notas</h2>
+      <ul id="lista-notas" class="lista-notas"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
